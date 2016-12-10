@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <title>Google Map Api</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Frontend Developer Case Study Test">
+  <meta name="keywords" content="Frontend">
+  <meta name="author" content="Frontend">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="RrRrx_E9Jl2sUtj4BcCtsPQH-reh0R_hqd4wlxJQqrM" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css"  href="css/font.css">
+  <!-- Stylesheet
+  ================================================== -->
+  <link rel="stylesheet" type="text/css"  href="css/app.css">
+  <!-- Javascript -->
+
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5y7orp9u7fIxkTNego2aam_nanI8x0XI&libraries=places&sensor=false"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+   <script type="text/javascript" src="js/html2canvas.js"></script>
+
+</head>
+<body>
+
+
+
+<div id="main_container">
+
+  <div class="LeftContent"> 
+
+    <div class="Panelleft"> 
+      <ul>
+        <li class="active">
+          <a link-data="/Browse" href="#Browse" data-toggle="tab"  onclick="BrowseFunction()">
+            <div class="Browse_Content">
+              <div class="NavIcon  Navicon_Browse"></div>
+              <div class="Text_Navigation">
+              Browse
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a link-data="/Suggest" href="#Suggest" data-toggle="tab" onclick="SuggestFunction()">
+            <div class="Browse_Content">
+              <div class="NavIcon  Navicon_Attraction"></div>
+              <div class="Text_Navigation">
+              Suggest Attraction
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a link-data="/Videos" href="#Videos" data-toggle="tab" onclick="VideosFunction()">
+            <div class="Browse_Content">
+              <div class="NavIcon  Navicon_Videos"></div>
+              <div class="Text_Navigation">
+              Videos
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a link-data="/Blog" href="#Blog" data-toggle="tab" onclick="BlogFunction()">
+            <div class="Browse_Content">
+              <div class="NavIcon  Navicon_Blog"></div>
+              <div class="Text_Navigation">
+              Blog
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a link-data="/About" href="#About" data-toggle="tab" onclick="AboutFunction()">
+            <div class="Browse_Content">
+              <div class="NavIcon  Navicon_About"></div>
+              <div class="Text_Navigation">
+              About
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div> 
+    <!-- End Panel Left -->
+
+    <div class="SubPanel">
+     <div id="ContainerHeight" class="container">
+       <div class="SinglePanel">
+                <div class="Singlepanel-heading">
+                  <h4 class="Singlepanel-title">
+                    <a  href="#SinglePanel">Filter By Favourite</a>
+                  </h4>
+                </div>
+       </div>
+
+        <div class="panel-group" id="accordion">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title Merlion">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse0" onclick="MerlionFunction()">Merlion
+                    </a>
+                   </h4>
+                 
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title MarinaBaySands">
+                  <a id="MarinaBaySands" data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="MarinaFunction(1)">Marina Bay Sands</a>
+                    <img class="ArrowOpen " src="img/PanelLeft/ArrowOpen.png" width="8" height="7" alt="ArrowOpen" />
+                    <img class="ArrowClose hide" src="img/PanelLeft/ArrowClose.png" width="8" height="7" alt="ArrowClose" />
+                  </h4>
+                </div>
+
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <ul>
+                      <li>
+                        <a link-data="/Museum" href="#Museum" data-toggle="tab" >
+                            <div class="Text_SubNavigation">
+                            ArtScience Museum
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/Marina" href="#Marina" data-toggle="tab" >
+                            <div class="Text_SubNavigation">
+                            Marina Bay Sands Skypark
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/DoubleHelix " href="#DoubleHelix " data-toggle="tab" >
+                            <div class="Text_SubNavigation">
+                            Double Helix Bridge
+                            </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title GardensByTheBay">
+                    <a id="GardensByTheBay" data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="GardenbytheBayFunction()">Garden by the Bay</a>
+                    <img class="ArrowOpen hide" src="img/PanelLeft/ArrowOpen.png" width="8" height="7" alt="ArrowOpen" />
+                    <img class="ArrowClose " src="img/PanelLeft/ArrowClose.png" width="8" height="7" alt="ArrowClose" />
+                  </h4>
+                </div>
+
+                <div id="collapse2" class="panel-collapse collapse ">
+                  <div class="panel-body">
+                    <ul>
+                      <li>
+                        <a link-data="/Museum" href="#Museum" data-toggle="tab">
+                            <div class="Text_SubNavigation">
+                            Garden Museum
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/Marina" href="#Marina" data-toggle="tab" >
+                            <div class="Text_SubNavigation">
+                            Garden San
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/DoubleHelix " href="#DoubleHelix " data-toggle="tab" >
+                            <div class="Text_SubNavigation">
+                            Double Helix Garden
+                            </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title Chinatown">
+                    <a id="Chinatown" data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="ChinaTownFunction()">China town</a>
+                    <img class="ArrowOpen hide " src="img/PanelLeft/ArrowOpen.png" width="8" height="7" alt="ArrowOpen" />
+                    <img class="ArrowClose " src="img/PanelLeft/ArrowClose.png" width="8" height="7" alt="ArrowClose" />
+                  </h4>
+                </div>
+
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
+                      <li>
+                        <a link-data="/ Chinatown" href="#Museum" data-toggle="tab" onclick="ChinatownFunction()">
+                            <div class="Text_SubNavigation">
+                            Chinatown Museum
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/ ChinatownSan" href="#Marina" data-toggle="tab" onclick="ChinatownMusFunction()">
+                            <div class="Text_SubNavigation">
+                            Chinatow San
+                            </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a link-data="/Double Chinatown" href="#DoubleHelix " data-toggle="tab" onclick="ChinatownDoubleFunction()">
+                            <div class="Text_SubNavigation">
+                            Double Helix Chinatown
+                            </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+         
+
+        </div>  <!-- End PanelGroup -->
+           <div id="right-panel"></div>
+              <div id="floating-panel">
+                <strong>Start:</strong>
+                <select id="start">
+                <option value="1.286920, 103.854570">Merlion</option>
+                <option value="1.287466, 103.851424">Asian Civilisations Museum</option>
+
+                </select>
+                <br>
+                <strong>End:</strong>
+                <select id="end">
+                <option value="1.290555, 103.846188">Clarke Quay</option>
+                <option value="1.284193, 103.843362">Chinatown</option>
+
+                </select>
+    </div>
+      </div> <!-- End ContainerHeight -->
+
+    </div>  <!-- End SubPanel Left -->
+  </div> <!-- End Left Content -->
+
+  <div class="RightContent">
+    <div class="PanelTop">
+        <div class="Title_Header">
+        TOP-RATED TOURIST ATTRACTIONS IN SINGAPURES
+        </div>
+
+        <div class="IconContent">
+          <a href="#" class="email">  
+          <img src="img/Header/Quest.png" width="31" height="31" alt="Quest" />
+          </a>
+
+          <a href="#" class="email">  
+          <img src="img/Header/Setting.png" width="31" height="31" alt="Setting"/>
+          </a>
+
+          <a href="#" class="email" onclick="CloseFunction()">  
+          <img src="img/Header/Close.png" width="31" height="31" alt="Close"/>
+          </a>
+        </div>
+         <div class="clearboth"> </div> 
+    </div>
+
+    <div class="MapContent">
+     <div class="ExportMap"onclick="ExportMap()">Export Map</div>
+      <div class="RefreshMap"onclick="RefreshMap()">Refresh Map</div>
+      <div id="map">
+        
+      </div>
+
+
+
+    </div>
+
+    <div class="PopUpDescription hide"> 
+        <div class="ImageDescription"> 
+            <img src="img/DescriptionImage/MerlionDesc.png" width="349" height="240" alt="MerlionDesc"/>
+        </div>
+        <div class="Title"> Merlion </div>
+        <div class="Content">
+            <p class="PlaceDescription1"> The Merlion is the national personification of Singapore.</p>
+            <p class="PlaceDescription2"> Its name combines "mer" meaning the sea and "lion". The fish body represents Singapore's origin as a fishing village when it was called Temasek, which means "sea town" in Javanese. The lion head represents Singapore's original name—Singapura—meaning "lion city" or "kota singa".
+            </p> 
+            </br> 
+            </br>
+            <div class="address">
+              <img class="IconLocation " src="img/IconMap/IconLocation.png" width="9" height="15" alt="IconLocation" />
+               <p  class="PlaceDescription3">  10 Bayfront Avenue, Singapore  </p>
+            </div>
+            <div class="LinkUrl">
+              <img class="IconLocation " src="img/IconMap/IconLink.png" width="9" height="15" alt="IconLocation" />
+              <a href="#" class="PlaceDescription4">  
+              http://www.marinabaysands.com/ 
+              </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="clearboth"> </div>
+
+  </div> <!-- End Right Content -->
+  <div class="clearboth"> </div>
+</div>  <!-- Main Container -->
+
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+{
+        "singapure": [
+            {
+                "Latitude": 1.286920,
+                "Longitude": 103.854570,
+                "PlaceName": "Merlion",
+                "PlaceDescription1": "The Merlion is the national personification of Singapore.",
+                "PlaceDescription2": "Its name combines mer meaning the sea and lion. The fish body represents Singapores origin as a fishing village when it was called Temasek, which means sea town in Javanese. The lion head represents Singapores original name Singapura—meaning lion city or kota singa.",
+                "PlaceDescription3": "10 Bayfront Avenue, Singapore ",
+                "PlaceDescription4": "http://www.marinabaysands.com/ ",
+                "Icon": "Merlion"
+            },
+
+           {
+                "Latitude": 1.287466,
+                "Longitude": 103.851424,
+                "PlaceName": "Asian Civilisations Museum",
+                "PlaceDescription1": "The Asian Civilisations Museum (ACM) is an institution which forms a part of the four museums in Singapore",
+                "PlaceDescription2": "It is one of the pioneering museums in the region to specialise in pan-Asian cultures and civilisations. The museum specialises in the material history of  China",
+                "PlaceDescription3": " Empress Pl, Singapura 179555",
+                "PlaceDescription4": "http://www.acm.org.sg/",
+                 "Icon": "AsianCivilisationsMuseum"
+            },
+             {
+                "Latitude": 1.290555,
+                "Longitude": 103.846188,
+                "PlaceName": "Clarke Quay",
+                "PlaceDescription1": "Clarke Quay is a historical riverside quay in Singapore, located within the Singapore River Planning Area.",
+                "PlaceDescription2": "Clarke Quay was named after Sir Andrew Clarke, Singapore's second Governor and Governor of the Straits Settlements from 1873 to 1875, who played a key role in positioning Singapore as the main port for the Malay states of Perak, Selangor and Sungei Ujong.",
+                "PlaceDescription3": "3 River Valley Rd, Singapura 179024",
+                "PlaceDescription4": "http://www.clarkequay.com",
+                 "Icon": "ClarkeQuay"
+            },
+             {
+                "Latitude": 1.295526,
+                "Longitude": 103.845331,
+                "PlaceName": "Fort Canning Park",
+                 "PlaceDescription1": "Fort Canning Park, an iconic hilltop landmark has witnessed many of Singapores historical milestones",
+                 "PlaceDescription2": "Fort Canning is a small hill slightly more than 60 metres high in the southeast portion of the island city-state of Singapore, within the Central Area that forms Singapores central business district. Although small in physical size, it has a long history intertwined with that of the city-state due to its location as the highest elevation within walking distance to the citys civic district within the Downtown Core. It is also a popular venue for music shows and concerts.",
+                "PlaceDescription3": " Museum Planning Area, Singapore",
+                "PlaceDescription4": "www.nparks.gov.sg",
+                 "Icon": "FortCanningPark"
+            },
+             {
+                "Latitude": 1.302279,
+                "Longitude": 103.837399,
+                "PlaceName": "Orchard Road",
+                "PlaceDescription1": "A whole street which is almost entirely dedicated to shopping, Orchard Road is the must-visit location for those looking for a bit of retail therapy.",
+                "PlaceDescription2": "Orchard Road got its name from the nutmeg, pepper and fruit orchards or the plantations that the road once led to.[4] Such plantations were common in the area in the 19th century.[5] Other sources attribute the name to Mr Orchard, a gardener and the owner of plantations which were located at the corner of present-day Scotts Road and Orchard Road",
+                "PlaceDescription3": "River Valley Rd, Singapura 179037",
+                "PlaceDescription4": "http://www.orchardroad.org/",
+                 "Icon": "OrchardRoad"
+            },
+
+             {
+                "Latitude": 1.289332,
+                "Longitude": 103.863152,
+                "PlaceName": "Singapore Flyer",
+                 "PlaceDescription1": "A match made in heaven at Singapore Flyer, with an exclusively-designed capsule and a night's stay at a luxurious five-star hotel in Singapore.",
+                 "PlaceDescription2": "The Singapore Flyer is a giant Ferris wheel in Singapore. Described by its operators as an observation wheel,[5] it opened in 2008, construction having taken about 2½ years.[1] It carried its first paying passengers on 11 February, opened to the public on 1 March, and was officially opened on 15 April. It has 28 air-conditioned capsules, each able to accommodate 28 passengers, and incorporates a three-storey terminal building",
+                "PlaceDescription3": "30 Raffles Ave, Singapura 039803",
+                "PlaceDescription4": "www.singaporeflyer.com",
+                 "Icon": "SingaporeFlyer"
+            },
+             {
+                "Latitude": 1.283099,
+                "Longitude": 103.860295,
+                 "PlaceName": "Marina Bay Sands",
+                 "PlaceDescription1": "Marina Bay Sands is an integrated resort fronting Marina Bay in Singapore. At its opening in 2010, it was billed as the worlds most expensive standalone casino property at S$8 billion, including the land cost.",
+                 "PlaceDescription2": "Marina Bay Sands is one of two winning proposals for Singapores first integrated resorts, the other being the Resorts World Sentosa, which incorporates a family-friendly Universal Studios Theme Park. The two large-scale resorts were conceived to meet Singapores economic and tourism objectives for the next decade and will have 30-year casino licenses, exclusive for the first ten years. Bidders were assessed based on four criteria: tourism appeal and contribution, architectural concept and design, development investment, and strength of the consortium and partners",
+                "PlaceDescription3": "10 Bayfront Avenue, Singapura 018956",
+                "PlaceDescription4": "www.marinabaysands.com/",
+                 "Icon": "MarinaBaySands"
+            },
+             {
+                "Latitude": 1.281790,
+                "Longitude": 103.863954,
+                "PlaceName": "Gardens By The Bay",
+                "PlaceDescription1": "Welcome to Singapores awe-inspiring 101 hectares garden. Set in the heart of the city, this green space comprises three waterfront gardens – Bay South, Bay",
+                 "PlaceDescription2": "ardens by the Bay is a nature park spanning 101 hectares (250 acres) of reclaimed land[2] in central Singapore, adjacent to the Marina Reservoir. The park consists of three waterfront gardens: Bay South Garden, Bay East Garden and Bay Central Garden. The largest of the gardens is Bay South Garden at 54 hectares (130 acres).",
+                "PlaceDescription3": "18 Marina Gardens Dr, Singapura 018953",
+                "PlaceDescription4": "www.gardensbythebay.com.sg",
+                 "Icon": "GardensByTheBay"
+            },
+             {
+                "Latitude": 1.284193,
+                "Longitude": 103.843362,
+                "PlaceName": "Chinatown",
+                 "PlaceDescription1": "Chinatown  is a subzone and ethnic enclave located within the Outram district in the Central Area of Singapore.",
+                 "PlaceDescription2": "Featuring distinctly Chinese cultural elements, Chinatown has had a historically concentrated ethnic Chinese population.",
+                "PlaceDescription3": "Chinatown Singapore",
+                "PlaceDescription4": "www.Chinatown.com",
+                 "Icon": "Chinatown"
+            }
+
+
+        ]
+    }
+
+

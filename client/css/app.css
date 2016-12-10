@@ -1,0 +1,480 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+* Bootstrap v3.3.7 (http://getbootstrap.com)
+* Copyright 2011-2016 Twitter, Inc.
+
+/*   Main Style   ==========================================*/
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+
+html, body{
+min-height: 100%;
+font-family: 'roboto-regular';
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+position: absolute;
+width: 100%;
+min-height: 100%;
+left: 0;
+right: 0;
+height: 100%;
+margin: 0;
+}
+
+.clearboth{
+clear: both;
+}
+#map {
+width: 1420px;
+height: 876px;
+margin: 0px;
+padding: 0px
+}
+
+.MapContent{
+width: 1420px;
+height: 876px;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+
+.MapContent .gm-svpc{
+	display: none;
+}
+.PopUpDescription{
+	width: 349px;
+	height: 876px;
+	background-color: #313541;
+	position: absolute;
+	right: 0px;
+	top: 126px;
+}
+
+.PopUpDescription .Title {
+width: 100%;
+height: 50px;
+background-color: #72cdd2;
+padding: 15px 36px;
+color:#fff;
+font-family: "MyriadPro Semibold";
+font-weight: 600;
+font-size: 20px;
+}
+
+.PopUpDescription .Content {
+width: 100%;
+height: 50px;
+background-color: #313541;
+padding: 36px 36px;
+color:#cccccc;
+font-family: "roboto-regular";
+font-size: 16px;
+}
+
+.PopUpDescription .Content a {
+color:#cccccc;
+font-family: "roboto-regular";
+font-size: 16px;
+text-decoration: none;
+}
+
+#main_container{
+width: 1920px;
+height: auto;
+margin: auto;
+background-color: #fff;
+clear: both;
+}
+.LeftContent{
+width: 500px;
+height: auto;
+margin: 0px;
+float: left;
+padding: 0px;
+}
+
+.RightContent{
+width: 1420px;
+height: auto;
+margin: 0px;
+float: left;
+padding: 0px;
+position: relative;
+}
+
+.Panelleft{
+width: 150px;
+padding: 0px 0px 0px 0px;
+background-color: #313541;
+position: relative;
+float: left;
+}
+
+.Panelleft ul{
+padding: 0px;
+border: none;
+margin: 0px;
+}
+
+.Panelleft ul li{
+border-bottom: 1px solid #2c303b;
+margin: 0px;
+padding: 27px 27px;
+width: 150px;
+height: 125px;
+
+}
+
+.Panelleft .active{
+background-color: #72cdd2;
+}
+
+.Panelleft .active .Text_Navigation{
+color: #fff;
+font-family: 'roboto-medium'!important;
+}
+
+.Panelleft ul li a{
+text-decoration: none;
+}
+.Panelleft ul li a:hover{
+text-decoration: none;
+}
+
+.Browse_Content{
+margin: 0 auto;
+vertical-align: middle;
+width: 100px;
+padding: 0;
+text-align: center;
+}
+
+.NavIcon {
+margin: 0 auto;
+display: inline-block;
+vertical-align: middle;
+padding: 0;
+}
+
+.Navicon_Browse{
+background: url(../img/PanelLeft/Browse.png) right;
+background-repeat: no-repeat;
+width: 41px;
+height: 41px;
+}
+
+.active .Navicon_Browse{
+background: url(../img/PanelLeft/BrowseWhite.png) right;
+background-repeat: no-repeat;
+width: 41px;
+height: 41px;
+}
+
+.Navicon_Attraction{
+background: url(../img/PanelLeft/Attraction.png) right;
+background-repeat: no-repeat;
+width: 44px;
+height: 44px;
+}
+
+.active .Navicon_Attraction{
+background: url(../img/PanelLeft/AttractionWhite.png) right;
+background-repeat: no-repeat;
+width: 44px;
+height: 44px;
+}
+.Navicon_Videos{
+background: url(../img/PanelLeft/Videos.png) right;
+background-repeat: no-repeat;
+width: 43px;
+height: 40px;
+}
+
+.active .Navicon_Videos{
+background: url(../img/PanelLeft/VideosWhite.png) right;
+background-repeat: no-repeat;
+width: 43px;
+height: 40px;
+}
+
+.Navicon_Blog{
+background: url(../img/PanelLeft/Blog.png) right;
+background-repeat: no-repeat;
+width: 41px;
+height: 41px;
+}
+
+.active .Navicon_Blog{
+background: url(../img/PanelLeft/BlogWhite.png) right;
+background-repeat: no-repeat;
+width: 41px;
+height: 41px;
+}
+
+.Navicon_About{
+background: url(../img/PanelLeft/About.png) right;
+background-repeat: no-repeat;
+width: 36px;
+height: 36px;
+}
+
+.active .Navicon_About{
+background: url(../img/PanelLeft/AboutWhite.png) right;
+background-repeat: no-repeat;
+width: 36px;
+height: 36px;
+}
+
+.Text_Navigation{
+font-size: 16px;
+font-family: 'roboto-regular';
+color: #647d80;
+margin: 0 auto;
+text-align: center;
+text-decoration: none;
+line-height: 14px;
+margin-top: 6px;
+}
+
+/* End Panel Left*/ 
+.PanelTop{
+background-color: #f4f7fa;
+height: 127px;
+position: relative;
+top: 0;
+padding: 0px;
+width: 100%;
+padding: 45px 0px;
+text-align: left;
+clear: both;
+}
+
+.PanelTop .Title_Header{
+font-size: 24px;
+font-family: 'roboto-black';
+color: #282c37;
+position: relative;
+padding-left: 50px;
+float: left;
+}
+
+.PanelTop .IconContent{
+float: right;
+ margin-right: 54px;
+}
+
+.PanelTop .IconContent img{
+margin: 0px 7px;
+}
+/* End Panel Top*/ 
+
+.SubPanel{
+position: relative;
+top: 0;
+left: 0px;
+background-color: #282c37;
+float: left;
+}
+
+.SubPanel .container{
+width: 350px;
+padding-top: 30px;
+padding-left: 25px;
+padding-right: 25px;
+padding-bottom: 0px;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+border-top: none; 
+background-color: #282c37;
+padding: 0px;
+}
+.panel-title {
+	height: 40px;
+	width: 300px;
+	color: #fff;
+	padding: 12px 34px;
+	position: relative;
+}
+
+.SelectPanel{
+	background-color: #1c1f27;
+	color: #92d72e;
+}
+
+.panel-title a{
+text-decoration: none;
+font-size: 16px;
+font-family: 'roboto-medium';
+}
+.panel-title a:hover{
+text-decoration: none;
+}
+
+.panel{
+border: none;
+}
+
+.panel-body ul li{
+list-style-type: none;
+padding: 0px;
+padding-left: 54px;
+margin-top: 16px;
+}
+
+.panel-title input{
+background-color: #1c1f27;
+border: none;
+font-size: 16px;
+color: #92d72e;
+height: 40px;
+width: 300px;
+margin-left: -35px;
+padding-left: 34px;
+
+}
+
+.form-control:focus {
+border-color: none;
+outline: 0;
+box-shadow: none;
+}
+
+.panel-body .Text_SubNavigation{
+font-size: 16px;
+font-family: 'roboto-regular';
+color: #647d80;
+margin: 0 auto;
+text-align: left;
+text-decoration: none;
+}
+.panel-body a{
+text-decoration: none;
+}
+.panel-body a:hover{
+text-decoration: none;
+}
+
+.panel-heading {
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+}
+
+.SubPanel .panel{
+box-shadow: none;
+margin: 0px!important;
+border-top: 1px solid #242832;
+background-color: #282c37;
+}
+
+.panel-body ul{
+padding: 0px;
+margin: 0px;
+margin-top: -20px;
+margin-bottom: 20px;
+}
+.panel-default>.panel-heading {
+color: #333;
+background-color: #282c37;
+border:none;
+padding: 0px;
+    height: 60px;
+    width: 300px;
+    padding: 10px 0px;
+}
+.panel-group .panel {
+border-radius: 0px;
+}
+
+.panel-title .FilterData{
+	font-size: 16px;
+    font-family: 'roboto-medium';
+    color: #647d80;
+    margin: 0 auto;
+    text-align: left;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.SinglePanel .Singlepanel-heading{
+	border: 1px solid #242832;
+    background-color: #282c37;
+    color: #333;
+    height: 40px;
+    width: 300px;
+    padding: 0px;
+    padding-left: 34px;
+}
+
+.SinglePanel {
+	margin-top: 10px;
+}
+
+.SinglePanel a{
+	text-decoration: none;
+	font-size: 16px;
+	font-family: 'roboto-medium';
+	color: #647d80;
+}
+.panel-group{
+	margin-top: 45px;
+}
+
+.panel-heading img{
+	position: absolute;
+	right: 15px;
+}
+
+.IconLocation{
+	 float: left;
+    margin-right: 15px;
+}
+
+.PopUpDescription .address{
+	padding-bottom: 5px;
+} 
+
+/* End SubPanel */ 
+
+
+#right-panel{
+	position: relative;
+    width: 250px;
+    background-color: #fff;
+    height: 500px;
+    overflow: auto;
+    margin: 0 auto;
+    background-color: #282c37;
+}
+#floating-panel{
+	background-color: #fff;
+	margin-top: 10px;
+    width: 250px;
+    margin: 0 auto;
+}
+.ExportMap{
+    width: 100px;
+    position: relative;
+    background-color: #313541;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    display: inline;
+   }
+
+  .RefreshMap{
+  	width: 100px;
+    position: relative;
+    background-color: #313541;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    display: inline;
+  }
+
+	.adp, .adp table{
+	background-color: #313541;
+	color: #fff!important;
+	}
