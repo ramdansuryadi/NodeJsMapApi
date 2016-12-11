@@ -1,31 +1,20 @@
 var express = require('express');
 var app = express();
-var Sequelize = require('sequelize');
 var bodyParser = require("body-parser");
-var GoogleMap = require('./server/models/GoogleMap');
+var urlroutes = require("./routes.js");
+var config = require('./config/config');
+
+app.set('port', config.port);
+app.set('address', config.address);
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-var MapControllers = require('./server/controllers/MapControllers');
+app.use(express.static(__dirname + '/public'));
 
-module.exports = app;
+urlroutes.setRequestUrl(app);
 
-app.post('/savedata', MapControllers.create);
-
-
-app.use(express.static(__dirname + '/client'));
-app.get('/', function (req, res) {
-   res.sendFile( __dirname + "/client/" + "index.htm" );
-})
-
-app.post('/process_get', function (req, res) {
-   var obj = {};
-   console.log('body: ' + JSON.stringify(req.body));
-   res.send(req.body);
-})
-
-var server = app.listen(8000, function () {
+var server = app.listen(app.get('port'), app.get('address'),function () {
 var host = server.address().address
 var port = server.address().port
-console.log("Example app listening at http://%s:%s", host, port)
-
+console.log("Example app listening at http://" + host + '::' + port)
 })
