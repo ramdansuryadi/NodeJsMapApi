@@ -1,5 +1,10 @@
 // Setting Height For Content Element
 $(document).ready(function() {
+
+  console.log(document.location.origin);
+  console.log(document.location.hostname);
+  console.log(document.location.host);
+
   var heightWin = $(window).height();
     $('.Panelleft').css('height', heightWin);
     $('.SubPanel').css('height', heightWin);
@@ -106,7 +111,7 @@ function InitMap() {
           var lat = e.latLng.lat(); // lat of clicked point
           var lng = e.latLng.lng(); // lng of clicked point
           var data = [lat, lng];
-          var urlsavedata = baseurl+"savedata";
+          var urlsavedata = baseurl+"/savedata";
           console.log(urlsavedata);
            $.ajax({
               method: 'POST',
@@ -181,8 +186,6 @@ function InitMap() {
 
      
   var start = document.getElementById('start').value;
-  console.log(start);
-  
   var end = document.getElementById('end').value;
 
 
@@ -223,21 +226,41 @@ function CreateControlAction(marker, map, infowindow, data) {
       map.setZoom(17); 
       map.setCenter(marker.getPosition());
 
-       var UrlGoogleMap = baseurl+"process_get"; 
+       var UrlGoogleMap = baseurl+"/process_get"; 
+      
       // Using​ AJAX​  for data retrieval
+      document.getElementById("PlaceDescription1").value = data.PlaceDescription1;
+      document.getElementById("PlaceDescription2").value = data.PlaceDescription2;
+      document.getElementById("PlaceDescription3").value = data.PlaceDescription3;
+      document.getElementById("PlaceDescription4").value = data.PlaceDescription4;
+      var PlaceDescription1 = $('#PlaceDescription1').val();
+      var PlaceDescription2 = $('#PlaceDescription2').val();
+      var PlaceDescription3 = $('#PlaceDescription3').val();
+      var PlaceDescription4 = $('#PlaceDescription4').val();
+      var dataarray = {
+        'Icon' : data.Icon,
+        'Latitude' : data.Latitude,
+        'Longitude': data.Longitude,
+        'PlaceDescription1': PlaceDescription1,
+        'PlaceDescription2': PlaceDescription2,
+        'PlaceDescription3': PlaceDescription3,
+        'PlaceDescription4': PlaceDescription4,
+        'PlaceName': data.PlaceName,
+      };
+
       $.ajax({
           method: 'POST',
           url: UrlGoogleMap,
-          data: JSON.stringify(data),
+          data: JSON.stringify(dataarray),
           contentType: 'application/json',
-          success : function (data) {
-           var response = JSON.stringify(data);
+          success : function (response) {
+
             // All the pin​  in the map can be clicked​  and show ​ different​  description about the place. 
-            $('#'+response.icon).click();
+            $('#'+response.Icon).click();
             $('.panel-heading .panel-title').removeClass('SelectPanel');
             $('.panel-heading .'+response.icon).addClass('SelectPanel');
             $('.PopUpDescription').removeClass('hide');
-            $('.PopUpDescription .Title').html(response.title);
+            $('.PopUpDescription .Title').html(response.PlaceName);
             $('.PopUpDescription .PlaceDescription1').html(response.PlaceDescription1);
             $('.PopUpDescription .PlaceDescription2').html(response.PlaceDescription2);
             $('.PopUpDescription .PlaceDescription3').html(response.PlaceDescription3);
@@ -297,7 +320,6 @@ function ZoomControl(controlDiv, map) {
 }
 
 function ExportMap(){
-  console.log("tes");
   var element = $("#map");
   html2canvas(element, {
     useCORS: true,

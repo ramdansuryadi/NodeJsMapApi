@@ -21,7 +21,7 @@
   ================================================== -->
   <link rel="stylesheet" type="text/css"  href="css/app.css">
   <!-- Javascript -->
-  <script type="text/javascript">var baseurl = document.URL;</script>
+  <script type="text/javascript">var baseurl = document.location.origin;</script>
   <script type="text/javascript" src="js/angular.js"></script>
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -291,12 +291,11 @@
     <div class="MapContent">
      <div class="ExportMap"onclick="ExportMap()">Export Map</div>
       <div class="RefreshMap"onclick="RefreshMap()">Refresh Map</div>
-      <div id="map">
-        
-      </div>
-
-
-
+      <div id="map"></div>
+        <textarea type="text" id="PlaceDescription1" class="hide"> </textarea>
+        <textarea type="text" id="PlaceDescription2" class="hide"> </textarea>
+        <textarea type="text" id="PlaceDescription3" class="hide"> </textarea>
+        <textarea type="text" id="PlaceDescription4" class="hide"> </textarea>
     </div>
 
     <div class="PopUpDescription hide"> 

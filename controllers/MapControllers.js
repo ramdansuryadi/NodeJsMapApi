@@ -7,7 +7,8 @@ exports.create = function(req, res) {
 };
 
 exports.show = function(req, res) {
+	console.log("tes");
 	var obj = {};
-	console.log('body: ' + JSON.stringify(req.body));
 	res.send(req.body);
 };
+
