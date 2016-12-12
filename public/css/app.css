@@ -63,12 +63,13 @@ font-size: 20px;
 
 .PopUpDescription .Content {
 width: 100%;
-height: 50px;
 background-color: #313541;
 padding: 36px 36px;
 color:#cccccc;
 font-family: "roboto-regular";
 font-size: 16px;
+overflow: auto;
+max-height: 500px;
 }
 
 .PopUpDescription .Content a {

@@ -80,6 +80,7 @@ function InitMap() {
        $.getJSON(GetJsonExternal, function(json1) {
        $.each(json1.singapure, function (key, data) {
           var icon = "img/IconMap/"+ data.Icon+".png";
+          console.log(icon);
           var latLng = new google.maps.LatLng(data.Latitude, data.Longitude);
           var marker = new google.maps.Marker({
               position: latLng,
@@ -299,6 +300,7 @@ function ZoomControl(controlDiv, map) {
 
   /* Call Content Icon .png for Zooming */
   var ZoomInBackground = "img/ZoomMap/ZoomIn.png";
+  console.log(ZoomInBackground);
   zoomInButton.style.backgroundImage = "url("+ZoomInBackground +")";
   controlWrapper.appendChild(zoomInButton);
     
