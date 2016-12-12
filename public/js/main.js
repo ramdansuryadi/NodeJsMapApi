@@ -106,11 +106,12 @@ function InitMap() {
           var lat = e.latLng.lat(); // lat of clicked point
           var lng = e.latLng.lng(); // lng of clicked point
           var data = [lat, lng];
+          var urlsavedata = baseurl+"savedata";
+          console.log(urlsavedata);
            $.ajax({
               method: 'POST',
-
               data: JSON.stringify(data),
-              url: 'http://localhost:8000/savedata',
+              url: urlsavedata,
               contentType: 'application/json',
               success : function (data) {
           
@@ -222,7 +223,7 @@ function CreateControlAction(marker, map, infowindow, data) {
       map.setZoom(17); 
       map.setCenter(marker.getPosition());
 
-      var UrlGoogleMap = 'http://localhost:8000/process_get';  
+       var UrlGoogleMap = baseurl+"process_get"; 
       // Using​ AJAX​  for data retrieval
       $.ajax({
           method: 'POST',

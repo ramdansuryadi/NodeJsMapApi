@@ -13,12 +13,9 @@ app.use(express.static(__dirname + '/public'));
 
 urlroutes.setRequestUrl(app);
 
-app.listen(process.env.PORT || 8000, function () {
-  console.log('Example app listening');
+app.listen(process.env.PORT || app.get('port'), function () {
+var address = app.get('address')
+var port = app.get('port')
+console.log("Example app listening at http://" + address + '::' + port)
 });
 
-// var server = app.listen(process.env.PORT || app.get('port'), app.get('address'),function () {
-// var host = server.address().address
-// var port = server.address().port
-// console.log("Example app listening at http://" + host + '::' + port)
-// })
