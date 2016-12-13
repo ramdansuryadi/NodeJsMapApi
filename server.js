@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
 var urlroutes = require("./routes.js");
-var config = require('./config/config');
+var config = require('./config/database');
 
 app.set('port', config.port);
 app.set('address', config.address);
